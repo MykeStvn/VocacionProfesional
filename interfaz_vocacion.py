@@ -1,11 +1,11 @@
 import tkinter as tk
-from PIL import Image, ImageTk  # Asegúrate de tener Pillow instalado
+from PIL import Image, ImageTk  # Bibliotecas
 from tkinter import messagebox
-import clips  # Asegúrate de tener instalada la biblioteca `clipspy`
+import clips  # Importar la biblioteca `clipspy`
 
 # Configurar el entorno CLIPS
 env = clips.Environment()
-env.load("orientacionvocacional.clp")  # Asegúrate de que el archivo `orientacionvocacional.clp` esté en la misma carpeta
+env.load("orientacionvocacional.clp")  # El archivo debe estar en la misma carpeta
 
 # Función para ejecutar CLIPS y determinar el diagnóstico
 def ejecutar_clips_vocacional(respuestas):
@@ -195,8 +195,6 @@ checkbutton_texts = [
 # Crear los checkbuttons
 for i, (text, var) in enumerate(checkbutton_texts):
     tk.Checkbutton(checkbutton_frame, text=text, variable=var, font=("Arial", 10), bg="#bbdefb").grid(row=i//4, column=i%4, padx=10, pady=5)
-
-
 
 # Botón para iniciar diagnóstico
 tk.Button(ventana, text="Determinar Vocación", bg="#81c784", fg="white", font=("Arial", 14, "bold"), command=iniciar_diagnostico_vocacional).pack(pady=10)

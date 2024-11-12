@@ -2,8 +2,7 @@
   (or (habilidades-matematicas) (resolucion-de-problemas) (disenio-construccion) (mejora-de-procesos))
   =>
   (assert (es-ingenieria))
-  (assert (mensaje "Gusto por la resolución de problemas, el diseño y la mejora de procesos."))
-  (printout t "Regla de ingeniería activada." crlf)
+  (assert (mensaje "Gusto por la resolución de problemas, el diseño y la mejora de procesos."))  
 )
 
 (defrule vocacion-ciencias-de-la-salud
